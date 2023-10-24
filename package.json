@@ -1,5 +1,14 @@
 {
   "dependencies": {
-    "bp-api": "^0.6.2"
+    "bp-api": "^0.6.2",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.24.3",
+    "fastify-plugin": "^4.5.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node --watch ./service/index.js"
   }
 }
