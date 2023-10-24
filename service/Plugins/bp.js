@@ -1,7 +1,7 @@
 const fp = require('fastify-plugin')
 
 const BP = require('bp-api').default
-const bp = new BP(process.env.domain, process.env.login, process.env.password)
+const bp = new BP(process.env.DOMAIN, process.env.LOGIN, process.env.PASSWORD)
 
 const WAREHOUSE_FIELDS = {
   DATE: 2,

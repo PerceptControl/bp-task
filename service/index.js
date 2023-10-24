@@ -18,7 +18,7 @@ server.setErrorHandler((error, request, reply) => {
 })
 
 server.listen(
-  { port: process.env.port_http, host: '0.0.0.0' },
+  { port: process.env.PORT_HTTP, host: '0.0.0.0' },
   (err, address) => {
     if (err) {
       server.log.error(err)

@@ -56,7 +56,7 @@ async function _onOrderUpdate(instance, request) {
 }
 
 function _isValidHookSignature(sign, req) {
-  const hmac = crypto.createHmac('md5', process.env.hook_secret)
+  const hmac = crypto.createHmac('md5', process.env.HOOK_SECRET)
   hmac.setEncoding('base64')
   hmac.write(JSON.stringify(req.body))
   hmac.end()
