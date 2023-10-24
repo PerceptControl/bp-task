@@ -17,12 +17,9 @@ server.setErrorHandler((error, request, reply) => {
   return 'Internal Error'
 })
 
-server.listen(
-  { port: process.env.port_http, host: '0.0.0.0' },
-  (err, address) => {
-    if (err) {
-      server.log.error(err)
-      process.exit(1)
-    }
-  },
-)
+server.listen({ port: process.env.PORT, host: '0.0.0.0' }, (err, address) => {
+  if (err) {
+    server.log.error(err)
+    process.exit(1)
+  }
+})
