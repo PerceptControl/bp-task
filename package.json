@@ -9,6 +9,6 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "start": "node --watch ./service/index.js"
+    "start": "node ./service/index.js"
   }
 }
