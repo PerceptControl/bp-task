@@ -29,7 +29,7 @@ export default defineComponent({
     let interval = null;
 
     async function getOrders() {
-      fetch("http://127.0.0.1:8000/orders")
+      fetch("https://unknown-dorothea-eg.koyeb.app//orders")
         .then(async (res) => {
           if (!res.ok) return;
           return res.json();
