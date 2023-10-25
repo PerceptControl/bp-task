@@ -1,9 +1,14 @@
 {
   "dependencies": {
+    "@fastify/cors": "^8.4.0",
+    "ajv": "^8.12.0",
     "bp-api": "^0.6.2",
     "dotenv": "^16.3.1",
     "fastify": "^4.24.3",
-    "fastify-plugin": "^4.5.1"
+    "fastify-plugin": "^4.5.1",
+    "fluent-json-schema": "^4.2.0-beta.0",
+    "quasar": "^2.13.0",
+    "vite": "^4.5.0"
   },
   "engines": {
     "node": ">=18.0.0"
