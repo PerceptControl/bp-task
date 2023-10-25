@@ -4,7 +4,9 @@ const server = require('fastify')({
   logger: true,
 })
 
+server.register(require('@fastify/cors'))
 server.register(require('./API'))
+server.register(require('./Plugins/validation_config'))
 server.register(require('./Plugins/webhook'))
 server.register(require('./Plugins/bp'))
 

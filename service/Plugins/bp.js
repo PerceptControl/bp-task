@@ -35,6 +35,17 @@ module.exports = fp((instance, opt, done) => {
         [ORDER_FIELDS.COMMENT]: comment,
       })
     },
+
+    getOrders: async () => {
+      const { Orders } = await _getCatalogs()
+
+      return bp.getAllRecords(Orders.id)
+    },
+
+    addOrder: async ({ comment }) => {
+      const { Orders } = await _getCatalogs()
+      return bp.postRecord(Orders.id, { [ORDER_FIELDS.COMMENT]: comment })
+    },
   })
 
   done()
