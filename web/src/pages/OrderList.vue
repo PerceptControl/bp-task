@@ -7,13 +7,14 @@
       class="absolute-right absolute-top"
     />
     <q-list bordered class="fit">
-      <template v-for="order of orders" :key="order.id">
+      <template v-for="(order, index) in orders" :key="order.id">
         <q-item>
           <q-item-section>
             <q-item-label>{{ order.values[3] }}</q-item-label>
             <q-item-label caption>ID: {{ order.id }}</q-item-label>
           </q-item-section>
         </q-item>
+        <q-separator v-if="index < orders.length - 1" />
       </template>
     </q-list>
   </q-page>
@@ -29,7 +30,7 @@ export default defineComponent({
     let interval = null;
 
     async function getOrders() {
-      fetch("https://unknown-dorothea-eg.koyeb.app//orders")
+      fetch("https://unknown-dorothea-eg.koyeb.app/orders")
         .then(async (res) => {
           if (!res.ok) return;
           return res.json();
@@ -50,7 +51,7 @@ export default defineComponent({
       clearInterval(interval);
     });
 
-    return { orders, loading, getOrders };
+    return { orders, getOrders };
   },
 });
 </script>
