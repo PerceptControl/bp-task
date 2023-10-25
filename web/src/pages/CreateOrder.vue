@@ -55,7 +55,7 @@ export default defineComponent({
 
     function onSubmit() {
       loading.value = true;
-      fetch("https://unknown-dorothea-eg.koyeb.app//orders/create", {
+      fetch("https://unknown-dorothea-eg.koyeb.app/orders/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
